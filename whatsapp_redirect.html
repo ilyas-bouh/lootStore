@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us on WhatsApp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f7f7f7;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 320px;
+      text-align: center;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: none;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    button {
+      background: #25d366;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #1ebe57;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Send us a message</h2>
+    <textarea id="message" placeholder="Type your message..."></textarea>
+    <button onclick="sendMessage()">Send on WhatsApp</button>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const message = document.getElementById('message').value.trim();
+      const phone = '212629566964'; // Example: 15551234567 for +1 555 123 4567
+      if (!message) {
+        alert('Please type a message before sending.');
+        return;
+      }
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+      window.location.href = whatsappUrl;
+    }
+  </script>
+</body>
+</html>

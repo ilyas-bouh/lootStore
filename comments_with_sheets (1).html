@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Comments (LocalStorage Only)</title>
+  <style>
+    :root{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{max-width:900px;margin:40px auto;padding:20px;color:#0b1220}
+    h1{font-size:1.6rem;margin-bottom:6px}
+    p.lead{color:#374151;margin-top:0}
+    .card{border:1px solid #e6e9ef;padding:16px;border-radius:12px;background:#fff}
+    textarea{width:100%;min-height:100px;padding:10px;font-size:14px;border-radius:8px;border:1px solid #d1d5db}
+    button{cursor:pointer;padding:8px 12px;border-radius:8px;border:0;background:#2563eb;color:#fff}
+    .muted{color:#6b7280;font-size:13px}
+    .controls{display:flex;gap:8px;margin-top:8px;align-items:center}
+    #comments{margin-top:18px;display:flex;flex-direction:column;gap:10px}
+    .comment{padding:10px;border-radius:10px;border:1px solid #eef2ff;background:#f8fafc}
+    .meta{font-size:12px;color:#6b7280}
+  </style>
+</head>
+<body>
+  <h1>Comments — Persistent (Free)</h1>
+  <p class="lead">This version uses only your browser's localStorage for persistence — completely free, no Google API or payments needed. It will keep comments even after refreshing or closing the tab.</p>
+
+  <div class="card">
+    <label for="comment">Your comment</label>
+    <textarea id="comment" placeholder="Write something honest... no bootlicking"></textarea>
+    <div class="controls">
+      <button id="post">Post</button>
+      <div class="muted">Comments are saved locally in your browser.</div>
+    </div>
+
+    <div id="statusLine" class="muted" style="margin-top:8px">Status: idle</div>
+
+    <div id="comments"></div>
+  </div>
+
+  <script>
+    const LOCAL_KEY = 'comments_local_v1';
+    const statusLine = document.getElementById('statusLine');
+    const postBtn = document.getElementById('post');
+    const commentInput = document.getElementById('comment');
+    const commentsEl = document.getElementById('comments');
+
+    function escapeHtml(str){
+      return str.replace(/[&<>"']/g, ch => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;' }[ch]));
+    }
+
+    function saveRowLocal(row){
+      const stored = JSON.parse(localStorage.getItem(LOCAL_KEY) || '[]');
+      stored.push(row);
+      localStorage.setItem(LOCAL_KEY, JSON.stringify(stored));
+    }
+
+    function loadCommentsFromLocal(){
+      commentsEl.innerHTML = '';
+      const stored = JSON.parse(localStorage.getItem(LOCAL_KEY) || '[]');
+      const rows = stored.slice().reverse();
+      rows.forEach(r => prependComment({timestamp:r[0], text:r[1]}));
+    }
+
+    function prependComment({timestamp, text}){
+      const el = document.createElement('div');
+      el.className = 'comment';
+      el.innerHTML = `<div class="meta">${new Date(timestamp).toLocaleString()}</div><div style="margin-top:6px">${escapeHtml(text)}</div>`;
+      commentsEl.prepend(el);
+    }
+
+    postBtn.addEventListener('click', () => {
+      const text = commentInput.value.trim();
+      if (!text) return;
+      const timestamp = new Date().toISOString();
+      saveRowLocal([timestamp, text]);
+      prependComment({timestamp, text});
+      commentInput.value = '';
+      statusLine.textContent = 'Comment saved locally.';
+    });
+
+    // Load comments on startup
+    loadCommentsFromLocal();
+  </script>
+</body>
+</html>
