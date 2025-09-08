@@ -1,127 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sabito Loot Haven - Game Items Store</title>
-  <!-- Tailwind CSS -->
+  <title>لووت هافن - متجر عناصر الألعاب</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Swiper.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body class="bg-gray-900 text-white">
-
-  <!-- Header -->
   <header class="bg-gray-800 shadow-md p-4">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-yellow-400">Sabito Loot Haven</h1>
-      <nav class="space-x-6">
-        <a href="#" class="hover:text-yellow-400">Home</a>
-        <a href="#" class="hover:text-yellow-400">Shop</a>
-        <a href="#" class="hover:text-yellow-400">About</a>
-        <a href="#" class="hover:text-yellow-400">Contact</a>
+      <h1 class="text-2xl font-bold text-yellow-400">لووت هافن</h1>
+      <nav class="space-x-6 space-x-reverse">
+        <a href="#" class="hover:text-yellow-400">الرئيسية</a>
+        <a href="#" class="hover:text-yellow-400">المتجر</a>
+        <a href="#" class="hover:text-yellow-400">حول</a>
+        <a href="#" class="hover:text-yellow-400">اتصل بنا</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="relative text-center py-20 bg-gray-800">
-    <h2 class="text-4xl font-bold mb-4">Get Epic Loot for Your Favorite Games</h2>
-    <p class="text-gray-300">Exclusive in-game items at unbeatable prices</p>
+    <h2 class="text-4xl font-bold mb-4">احصل على غنائم ملحمية لألعابك المفضلة</h2>
+    <p class="text-gray-300">عناصر حصرية داخل اللعبة بأسعار لا تقاوم</p>
   </section>
 
-  <!-- Product Slider -->
   <section class="container mx-auto py-12">
-    <h3 class="text-3xl font-bold mb-6 text-center">Top Deals</h3>
+    <h3 class="text-3xl font-bold mb-6 text-center">أفضل العروض</h3>
     <div class="swiper">
       <div class="swiper-wrapper">
-        <!-- Card Template -->
         <div class="swiper-slide">
           <div class="bg-gray-800 rounded-2xl shadow-md overflow-hidden p-4">
-            <img src="thu1.webp" alt="Item" class="rounded-xl mb-4 w-full">
+            <img src="thu1.webp" alt="عنصر" class="rounded-xl mb-4 w-full">
             <div class="flex justify-between items-start">
               <div>
-                <h4 class="text-lg font-bold">Legendary Sword</h4>
-                <div class="flex items-center space-x-2 mt-2">
+                <h4 class="text-lg font-bold">سيف أسطوري</h4>
+                <div class="flex items-center space-x-2 space-x-reverse mt-2">
                   <span class="text-yellow-400 text-xl font-bold">$25</span>
                   <span class="text-gray-400 line-through">$40</span>
                 </div>
                 <div class="mt-2">⭐⭐⭐⭐☆</div>
               </div>
-              <button onclick="openPurchaseDialog('PUBG battle pass')" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-xl hover:bg-yellow-500">Buy Now!</button>
+              <button onclick="openPurchaseDialog('تذكرة PUBG')" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-xl hover:bg-yellow-500">اشترِ الآن!</button>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="bg-gray-800 rounded-2xl shadow-md overflow-hidden p-4">
-            <img src="thu2.webp" alt="Item" class="rounded-xl mb-4 w-full">
+            <img src="thu2.webp" alt="عنصر" class="rounded-xl mb-4 w-full">
             <div class="flex justify-between items-start">
               <div>
-                <h4 class="text-lg font-bold">Mystic Shield</h4>
-                <div class="flex items-center space-x-2 mt-2">
+                <h4 class="text-lg font-bold">درع غامض</h4>
+                <div class="flex items-center space-x-2 space-x-reverse mt-2">
                   <span class="text-yellow-400 text-xl font-bold">$15</span>
                   <span class="text-gray-400 line-through">$30</span>
                 </div>
                 <div class="mt-2">⭐⭐⭐⭐⭐</div>
               </div>
-              <button onclick="openPurchaseDialog('Mihoyo battle pass')" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-xl hover:bg-yellow-500">Buy Now!</button>
+              <button onclick="openPurchaseDialog('تذكرة Mihoyo')" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-xl hover:bg-yellow-500">اشترِ الآن!</button>
             </div>
           </div>
         </div>
 
         <div class="swiper-slide">
           <div class="bg-gray-800 rounded-2xl shadow-md overflow-hidden p-4">
-            <img src="thu4.webp" alt="Item" class="rounded-xl mb-4 w-full">
+            <img src="thu4.webp" alt="عنصر" class="rounded-xl mb-4 w-full">
             <div class="flex justify-between items-start">
               <div>
-                <h4 class="text-lg font-bold">Dragon Slayer Bow</h4>
-                <div class="flex items-center space-x-2 mt-2">
+                <h4 class="text-lg font-bold">قوس قاتل التنين</h4>
+                <div class="flex items-center space-x-2 space-x-reverse mt-2">
                   <span class="text-yellow-400 text-xl font-bold">$40</span>
                   <span class="text-gray-400 line-through">$55</span>
                 </div>
                 <div class="mt-2">⭐⭐⭐⭐☆</div>
               </div>
-              <button onclick="openPurchaseDialog('pass royale')" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-xl hover:bg-yellow-500">Buy Now!</button>
+              <button onclick="openPurchaseDialog('تذكرة رويال')" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-xl hover:bg-yellow-500">اشترِ الآن!</button>
             </div>
           </div>
         </div>
       </div>
-      <!-- Navigation -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </div>
   </section>
 
-  <!-- Testimonials -->
   <section class="bg-gray-800 py-12">
-    <h3 class="text-3xl font-bold text-center mb-8">What Our Players Say</h3>
+    <h3 class="text-3xl font-bold text-center mb-8">ماذا يقول لاعبونا</h3>
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="bg-gray-700 p-6 rounded-2xl shadow-lg">
-        <p class="mb-4">"Got my items instantly! Best store for rare loot."</p>
-        <h4 class="font-bold text-yellow-400">Alex P.</h4>
+        <p class="mb-4">"يا جماعة، الطلب وصلني في ثواني! أحسن متجر والله."</p>
+        <h4 class="font-bold text-yellow-400">سعيد - سعودي</h4>
       </div>
       <div class="bg-gray-700 p-6 rounded-2xl shadow-lg">
-        <p class="mb-4">"Customer support was fantastic when I had a question."</p>
-        <h4 class="font-bold text-yellow-400">Maria G.</h4>
+        <p class="mb-4">"خدمة العملاء عال العال، ساعدوني بسرعة لما كان عندي سؤال."</p>
+        <h4 class="font-bold text-yellow-400">ليلى - مصرية</h4>
       </div>
       <div class="bg-gray-700 p-6 rounded-2xl shadow-lg">
-        <p class="mb-4">"I saved so much on legendary gear, love this site!"</p>
-        <h4 class="font-bold text-yellow-400">Chris L.</h4>
+        <p class="mb-4">"وفرت بزاف على العتاد الأسطوري، الموقع هايل!"</p>
+        <h4 class="font-bold text-yellow-400">كريم - جزائري</h4>
       </div>
     </div>
   </section>
 
-  <!-- Partner Logos -->
   <section class="py-12">
-    <h3 class="text-3xl font-bold text-center mb-8">Our Partners</h3>
+    <h3 class="text-3xl font-bold text-center mb-8">شركاؤنا</h3>
     <div class="container mx-auto flex flex-wrap justify-center gap-8">
-      <img src="https://static.lootbar.gg/src/img/09_gpay.dccb39c1.png" alt="Partner 1" class="h-12">
-      <img src="https://www.hoyoverse.com/_nuxt/img/logo-light.3def3bc.png"  alt="Partner 2" class="h-12">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIcAAAAwCAMAAAAM9pn1AAAAclBMVEUAAAAAh+cAi+oAjewAi+sAjOsAjOwAi+kAjOsAiuoAjewAjOoAjOsAi+oAiugAjOsAjOsAjOwAiukAi+gAjO0AjesAjOv+/v6f0/e/4fpAqPDu9/1gt/MQk+yPzPZvvvMgmu5/xfWv2vhQsPLP6Pt/xfQstJRMAAAAFnRSTlMAIIDfQJ+/oL8Q75DPcDBg769QcG+PJR2SWwAAAjJJREFUWMPtl9t6ojAURncOICEBBNuIeG5n3v8Vx0mRvSkRmSkfcOG6ir+SLLKTCPDixT/BmEwVzIvUJrZ/iSMtYSYUjy1FZDAHb2gxowmLrI+AwaSksfUjJhJBjQWIsJvGAkSYsH1EMBEr2w+HSSjsE9ZYmehO0q2WygJjIs48ufcCldzyHHNhnxHAnZ4tXcT+L7ImV/7z6h0c0no4VufydLjYGoUeiEiBwDsre3Bu1IPVUZX7raM8flsh7XoRkbeWoaLDIaargTuhnp7m5qvf+23DqfkhevAs4zmOR3Z+xJNV25vZ/rzuaINl2W3Lz6o6nHZbStkUBj2Y6yhv9avdp+YQWCvciq0caJ7QPGk8kK5H0fJwhHQ8g6vZ3ZjEPeDN4295CqtBHpuuB6P90naIE6XcGMR1Q65NiVMG4SAP3fLA8TTpl9YiIHlTC/STNM9dPswj8HjoB+PpYR64Vsb2mGA+htRF8y/MQA9eI1z+s3VaYBsZ6EHhA/et7HqssD2Gh/R7/Cqvp4/943NMveNwo3io2Do+0GG/+zzWh/25+WNAj0zKTLurBKMeJvxCDPQIa2KX3xfIZXeXODiJFhv0oBQAP9wveO7hHF3O1+u5QgkC83msMxjTA8L/ew6KGIzrIe0zcERxJ5CAPD7XxQ2o0bd20uMB+TKek0EJ24eBqUiX8R61mPfKm4hYhMbDd8tcwdQkXRNRwAww3jYxiYKZkNrUZ3bEJcwLSyVj8OLFkvgDkG2jNcAy9/0AAAAASUVORK5CYII=" alt="Partner 3" class="h-12">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAwCAMAAADtsU7hAAAAbFBMVEUAAAAAMIcAcN8AMIcAMIYAcN8AMIYAcN8AMIcAcN8AMIcAcN8AMIcAcN8AMIYAcN4AcN4AMIcAcN4AMIAAcN8AMIcAcN0AcN4AMIYAcN4AMIcAMIYAMIcAcN8AcN8AMIUAcNwAcN8AMIcAcN/1N9sJAAAAInRSTlMAYEDfQL8gIL/v75+fEIBw0DBgEN/PkIBwsLBQkDBQkFCPXqKB8AAAAxhJREFUWMPtl9t6qjAQhRfhECAc5KCgWLcl7/+OO2ZIAGO/qhdc7O1/0aYUM2TNmhnEhw8f/g0ibyaosB2ncUXsYSP24x1nbEM63lNgC6LRIW2wAcHosonF+tElwAacfw5cmfT7+yzCU9SJJNrwwPEAdruBQRGPLg1zxejxDEe5oIZLKU1g3427R9hpMV5P/E4u4XA4SEWuFs3o8ofLJHfE+IMnkCsOjyVpdR5Hl6iW8mIqfKgCzycdfudLp5czJnTg42NJQigGN26GVueHxIDC0w7D71yl2fdAKwcrROHE9aNO6hMH5py0ivXqnGVFgEENlAiV+jmACNQ6QGf37cyJ81IIUXLUCk6SlHpEuHEv5AsS40T2phwPkxML+jvTpTf3Pw9Hu+9xsnU31de3VFzBrKn39zo3dTLl/2z6duRThLU6PQLrucYnSUKz73VytZBLvqia8rsRkfqnvsnpVmHEiLMsJiXgUa3F07ED+vDeFF4aAYkWWIjdtMk3NZNWEpT6ZB4RPumVf5WhJLgjRhD55k46eTVpEk3m64FcLmm5zuiOAXynVyRJOI+Inidyhe4fq7ge7R7ZSZqaT/eUigwAW8eFoF8Krk1O1STmrhhc5IrdXYWncUXt5ARNZiROdWoz7UndDy1tlwPWahTxMF2Zu2JUrhtObiv85CmqxgQpoNHPYHPba0Vs8ZaMMZ7bdsKgaXXE+QoZZ9nbE0G3UiYHWPRzzLVT2Eylk9CTqXMYmJ0Upoyu5G2FPw0FUriuLxyG03oy062Vra7BXjRCk6kTWLhNG2/1I1FbgR0RJyRUZu5LoBbZJJbKK07J1EYWKzRyCjSTULZLoRcJINYGKtQnViLN1v35HWl58WylXQ+GTi4JKRfHeUQMjLKLJdXUn2cK+z4yz6omvV1oFiOiezSe9ZEPJEE37xWU0p0lTazwsMSLb1GKxsuyrF/oX4GoQwXDklKPwRoHIYTKpPr/kdNMudF8T2P7dyKs8J54Def4GTJ1iVehLor3oVRc8CoZddG3yclbHK8wC/0+ObuRv/cFFx8+fPg/+Qv7IrT048fZ8AAAAABJRU5ErkJggg==" alt="Partner 4" class="h-12">
+      <img src="https://static.lootbar.gg/src/img/09_gpay.dccb39c1.png" alt="شريك 1" class="h-12">
+      <img src="https://www.hoyoverse.com/_nuxt/img/logo-light.3def3bc.png"  alt="شريك 2" class="h-12">
+     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAwCAMAAADtsU7hAAAAbFBMVEUAAAAAMIcAcN8AMIcAMIYAcN8AMIYAcN8AMIcAcN8AMIcAcN8AMIcAcN8AMIYAcN4AcN4AMIcAcN4AMIAAcN8AMIcAcN0AcN4AMIYAcN4AMIcAMIYAMIcAcN8AcN8AMIUAcNwAcN8AMIcAcN/1N9sJAAAAInRSTlMAYEDfQL8gIL/v75+fEIBw0DBgEN/PkIBwsLBQkDBQkFCPXqKB8AAAAxhJREFUWMPtl9t6qjAQhRfhECAc5KCgWLcl7/+OO2ZIAGO/qhdc7O1/0aYUM2TNmhnEhw8f/g0ibyaosB2ncUXsYSP24x1nbEM63lNgC6LRIW2wAcHosonF+tElwAacfw5cmfT7+yzCU9SJJNrwwPEAdruBQRGPLg1zxejxDEe5oIZLKU1g3427R9hpMV5P/E4u4XA4SEWuFs3o8ofLJHfE+IMnkCsOjyVpdR5Hl6iW8mIqfKgCzycdfudLp5czJnTg42NJQigGN26GVueHxIDC0w7D71yl2fdAKwcrROHE9aNO6hMH5py0ivXqnGVFgEENlAiV+jmACNQ6QGf37cyJ81IIUXLUCk6SlHpEuHEv5AsS40T2phwPkxML+jvTpTf3Pw9Hu+9xsnU31de3VFzBrKn39zo3dTLl/2z6duRThLU6PQLrucYnSUKz73VytZBLvqia8rsRkfqnvsnpVmHEiLMsJiXgUa3F07ED+vDeFF4aAYkWWIjdtMk3NZNWEpT6ZB4RPumVf5WhJLgjRhD55k46eTVpEk3m64FcLmm5zuiOAXynVyRJOI+Inidyhe4fq7ge7R7ZSZqaT/eUigwAW8eFoF8Krk1O1STmrhhc5IrdXYWncUXt5ARNZiROdWoz7UndDy1tlwPWahTxMF2Zu2JUrhtObiv85CmqxgQpoNHPYHPba0Vs8ZaMMZ7bdsKgaXXE+QoZZ9nbE0G3UiYHWPRzzLVT2Eylk9CTqXMYmJ0Upoyu5G2FPw0FUriuLxyG03oy062Vra7BXjRCk6kTWLhNG2/1I1FbgR0RJyRUZu5LoBbZJJbKK07J1EYWKzRyCjSTULZLoRcJINYGKtQnViLN1v35HWl58WylXQ+GTi4JKRfHeUQMjLKLJdXUn2cK+z4yz6omvV1oFiOiezSe9ZEPJEE37xWU0p0lTazwsMSLb1GKxsuyrF/oX4GoQwXDklKPwRoHIYTKpPr/kdNMudF8T2P7dyKs8J54Def4GTJ1iVehLor3oVRc8CoZddG3yclbHK8wC/0+ObuRv/cFFx8+fPg/+Qv7IrT048fZ8AAAAABJRU5ErkJggg==" alt="Partner 4" class="h-12">
       <img src="https://img.itch.zone/aW1nLzE4MzUyNzA4LnBuZw==/original/GauNfb.png" alt="Partner 5" class="h-12">
     </div>
   </section>
